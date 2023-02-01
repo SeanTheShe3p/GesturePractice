@@ -26,18 +26,19 @@ class MainActivity : AppCompatActivity(),GestureDetector.OnGestureListener, Gest
     }
 
     override fun onDown(e: MotionEvent): Boolean {
-        val textOnDown:TextView = findViewById(R.id.mainText)
-        textOnDown.text = "onDown"
+        //val textOnDown:TextView = findViewById(R.id.mainText)
+        //textOnDown.text = "onDown"
+        findViewById<TextView>(R.id.mainText).text = "onDown"
         //mainText = findViewById(R.id.mainText)
         return true
     }
 
     override fun onShowPress(e: MotionEvent) {
-        mainText.text = "onShowPress"
+        findViewById<TextView>(R.id.mainText).text = "onShowPress"
     }
 
     override fun onSingleTapUp(e: MotionEvent): Boolean {
-        mainText.text = "onSingleTapUp"
+        findViewById<TextView>(R.id.mainText).text = "onSingleTapUp"
         return true
     }
 
@@ -47,12 +48,12 @@ class MainActivity : AppCompatActivity(),GestureDetector.OnGestureListener, Gest
         distanceX: Float,
         distanceY: Float
     ): Boolean {
-        mainText.text = "onScroll"
+        findViewById<TextView>(R.id.mainText).text = "onScroll"
         return true
     }
 
     override fun onLongPress(e: MotionEvent) {
-        mainText.text = "onLongPress"
+        findViewById<TextView>(R.id.mainText).text = "onLongPress"
     }
 
     override fun onFling(
@@ -61,22 +62,22 @@ class MainActivity : AppCompatActivity(),GestureDetector.OnGestureListener, Gest
         velocityX: Float,
         velocityY: Float
     ): Boolean {
-        mainText.text = "onFling"
+        findViewById<TextView>(R.id.mainText).text = "onFling"
         return true
     }
 
     override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-        mainText.text = "onSingleTapConfirmed"
+        findViewById<TextView>(R.id.mainText).text = "onSingleTapConfirmed"
         return true
     }
 
     override fun onDoubleTap(e: MotionEvent): Boolean {
-        mainText.text = "onDoubleTap"
+        findViewById<TextView>(R.id.mainText).text = "onDoubleTap"
         return true
     }
 
     override fun onDoubleTapEvent(e: MotionEvent): Boolean {
-        mainText.text = "onDoubleTapEvent"
+        findViewById<TextView>(R.id.mainText).text = "onDoubleTapEvent"
         return true
     }
 }
